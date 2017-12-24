@@ -2,5 +2,7 @@
 	"name": "xelement-money",
 	"version": "0.0.0",
 	"dependencies": {},
-	"devDependencies": {}
+	"devDependencies": {
+		"typescript": "^2.6.2"
+	}
 }
