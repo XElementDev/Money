@@ -1,8 +1,14 @@
 {
 	"name": "xelement-money",
 	"version": "0.0.0",
-	"dependencies": {},
+	"dependencies": {
+		"express": "^4.16.2",
+		"node": "^9.3.0",
+		"url-join": "^2.0.2"
+	},
 	"devDependencies": {
+		"@types/express": "^4.11.0",
+		"@types/node": "^8.5.2",
 		"typescript": "^2.6.2"
 	},
 	"scripts": {
