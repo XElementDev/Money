@@ -7,3 +7,16 @@ package-lock.json
 typings/
 *.js
 *.js.map
+
+
+# + Visual Studio Code
+#taken from https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
+.vscode/*
+
+
+# - Visual Studio Code
+#taken from https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
