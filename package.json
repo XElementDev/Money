@@ -4,5 +4,8 @@
 	"dependencies": {},
 	"devDependencies": {
 		"typescript": "^2.6.2"
+	},
+	"scripts": {
+		"install": "npm install -g typescript"
 	}
 }

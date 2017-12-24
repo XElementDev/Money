@@ -1,8 +1,10 @@
 {
 	"compilerOptions": {
 		"alwaysStrict": true, 
+		"module": "commonjs", 
 		"moduleResolution": "node", 
 		"outDir": "dist", 
-		"removeComments": true
+		"removeComments": true, 
+		"target": "es2015"//where "es2015"="es6"
 	}
 }
