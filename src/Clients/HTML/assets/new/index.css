@@ -1,22 +1,22 @@
 .title-header-earning {
-    background-image: linear-gradient(to bottom, #00AA00, #5cb85c);/*see bg-success*/
-    color: rgba(255, 255, 255, .9);
-    padding: 12px;
+	background-image: linear-gradient(to bottom, #00AA00, #5cb85c);/*see bg-success*/
+	color: rgba(255, 255, 255, .9);
+	padding: 12px;
 }
 .title-header-expense {
-    background-image: linear-gradient(to bottom, #CC0000, #d9534f);/*see bg-danger*/
-    color: rgba(255, 255, 255, .9);
-    padding: 12px;
+	background-image: linear-gradient(to bottom, #CC0000, #d9534f);/*see bg-danger*/
+	color: rgba(255, 255, 255, .9);
+	padding: 12px;
 }
 
 .content {
-    margin: 24px 0px;
+	margin: 24px 0px;
 }
 
 form .row label {
-    background: magenta;
+	background: magenta;
 }
 
 form row input {
-    background: cyan;
+	background: cyan;
 }

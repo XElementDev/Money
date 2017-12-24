@@ -1,15 +1,15 @@
 .title-header {
-    background-image: linear-gradient(to bottom, #0000FF, #5bc0de);/*see bg-info*/
-    color: rgba(255, 255, 255, .9);
-    margin-bottom: 24px;
-    padding: 24px;
+	background-image: linear-gradient(to bottom, #0000FF, #5bc0de);/*see bg-info*/
+	color: rgba(255, 255, 255, .9);
+	margin-bottom: 24px;
+	padding: 24px;
 }
 
 
 .content {
-    margin: 24px 0px;
+	margin: 24px 0px;
 }
 
 .content i.glyphicon-user {
-    font-size: 128px;
+	font-size: 128px;
 }
