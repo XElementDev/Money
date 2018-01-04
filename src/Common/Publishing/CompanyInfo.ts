@@ -2,7 +2,7 @@
  * The internal company name.
  * This name should actually never change.
  */
-export function internalName(): string {
+export function internalNameSync(): string {
 	return "XElement";
 }
 
@@ -11,6 +11,6 @@ export function internalName(): string {
  * The official company name.
  * Note: This name may change from time to time.
  */
-export function officialName(): string {
+export function officialNameSync(): string {
 	return "XElement Development";
 }

@@ -20,7 +20,7 @@ export class MoneyRestService {
 	private configureRoutesSync(): void {
 		this.router.get("/", (req, res) => { res.end("Hello World!"); });
 
-		const path = "/" + urljoin(CompanyInfo.internalName(), ProductInfo.internalName(), 
+		const path = "/" + urljoin(CompanyInfo.internalNameSync(), ProductInfo.internalNameSync(), 
 		                           "API", "REST", "v0");
 		this.app.use(path, this.router);
 	}

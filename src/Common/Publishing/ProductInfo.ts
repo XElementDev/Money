@@ -2,7 +2,7 @@
  * The internal product name.
  * This name should actually never change.
  */
-export function internalName(): string {
+export function internalNameSync(): string {
 	return "Money";
 }
 
@@ -11,6 +11,6 @@ export function internalName(): string {
  * The official product name, under which the product is sold.
  * Note: This name may change easily from time to time.
  */
-export function officialName(): string {
+export function officialNameSync(): string {
 	return "Haushaltsbuch";
 }
