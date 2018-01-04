@@ -4,6 +4,7 @@
 	"dependencies": {
 		"express": "^4.16.2",
 		"node": "^9.3.0",
+		"tsoa": "^2.0.1",
 		"url-join": "^2.0.2"
 	},
 	"devDependencies": {
@@ -15,6 +16,7 @@
 		"gulp-sourcemaps": "^2.6.3",
 		"gulp-typescript": "^3.2.3",
 		"through2": "^2.0.3",
+		"tsoa": "^2.0.1",
 		"typescript": "^2.6.2"
 	},
 	"scripts": {

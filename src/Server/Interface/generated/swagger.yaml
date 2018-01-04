@@ -1,0 +1,30 @@
+basePath: /v0
+consumes:
+    - application/json
+definitions: {}
+info:
+    title: TSOA
+    version: 1.0.0
+    description: 'Build swagger-compliant REST APIs using TypeScript and Node'
+    license:
+        name: MIT
+paths:
+    /persons:
+        get:
+            operationId: GetPersonsSync
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        type: array
+                        items:
+                            type: string
+            security: []
+            parameters: []
+produces:
+    - application/json
+swagger: '2.0'
+securityDefinitions: {}
+host: 'localhost:8080'

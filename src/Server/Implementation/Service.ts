@@ -4,6 +4,11 @@ import * as urljoin from "url-join";
 
 import * as CompanyInfo from "../../Common/Publishing/CompanyInfo";
 import * as ProductInfo from "../../Common/Publishing/ProductInfo";
+import { RegisterRoutes as registerRoutesSync } from "./generated/routes";
+
+//#region import-only
+import { PersonController } from "./controllers/PersonController";
+//#endregion
 
 
 //#region not unit-tested
@@ -18,10 +23,10 @@ export class MoneyRestService {
 
 
 	private configureRoutesSync(): void {
-		this.router.get("/", (req, res) => { res.end("Hello World!"); });
+		registerRoutesSync(this.router);
 
 		const path = "/" + urljoin(CompanyInfo.internalNameSync(), ProductInfo.internalNameSync(), 
-		                           "API", "REST", "v0");
+		                           "API", "REST");
 		this.app.use(path, this.router);
 	}
 
