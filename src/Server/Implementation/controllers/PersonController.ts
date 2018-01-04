@@ -9,11 +9,23 @@ export class PersonController extends Controller {
 
 	public constructor() {
 		super();
+		return;
 	}
 
 
 	@Get()
 	public getPersonsSync(): Array<Person> {
+		return this.persons;
+	}
+
+
+	public static initializeSync(): void {
+		PersonController.initializeDummyValuesSync();
+		return;
+	}
+
+
+	private static initializeDummyValuesSync(): void {
 		const personA: Person = {
 			id: "1", 
 			prename: "John", 
@@ -25,9 +37,19 @@ export class PersonController extends Controller {
 			prename: "Erika", 
 			surname: "Mustermann"
 		}
-		const persons = [ personA, personB ];
-		return persons;
+		const dummyPersons = [ personA, personB ];
+		PersonController._persons = dummyPersons;
+		return;
 	}
 
+
+	private get persons(): Array<Person> { return PersonController._persons; }
+
+
+	private static _persons: Array<Person>;
+
 }
+
+
+PersonController.initializeSync();
 //#endregion
