@@ -3,6 +3,14 @@ import { Controller, ValidateParam, FieldErrors, ValidateError, TsoaRoute } from
 import { PersonController } from './../controllers/PersonController';
 
 const models: TsoaRoute.Models = {
+	"Person": {
+		"properties": {
+			"avatarUrlStr": { "dataType": "object" },
+			"id": { "dataType": "string", "required": true },
+			"prename": { "dataType": "string", "required": true },
+			"surname": { "dataType": "string", "required": true },
+		},
+	},
 };
 
 export function RegisterRoutes(app: any) {

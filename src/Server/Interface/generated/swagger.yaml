@@ -1,7 +1,22 @@
 basePath: /v0
 consumes:
     - application/json
-definitions: {}
+definitions:
+    Person:
+        properties:
+            avatarUrlStr:
+                type: object
+            id:
+                type: string
+            prename:
+                type: string
+            surname:
+                type: string
+        required:
+            - id
+            - prename
+            - surname
+        type: object
 info:
     title: TSOA
     version: 1.0.0
@@ -20,7 +35,7 @@ paths:
                     schema:
                         type: array
                         items:
-                            type: string
+                            $ref: '#/definitions/Person'
             security: []
             parameters: []
 produces:
