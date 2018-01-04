@@ -24,6 +24,23 @@ info:
     license:
         name: MIT
 paths:
+    '/persons/{id}':
+        get:
+            operationId: GetPersonSync
+            produces:
+                - application/json
+            responses:
+                '200':
+                    description: Ok
+                    schema:
+                        $ref: '#/definitions/Person'
+            security: []
+            parameters:
+                -
+                    in: path
+                    name: id
+                    required: true
+                    type: string
     /persons:
         get:
             operationId: GetPersonsSync

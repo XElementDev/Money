@@ -13,6 +13,13 @@ export class PersonController extends Controller {
 	}
 
 
+	@Get("{id}")
+	public getPersonSync(id: string): Person {
+		const matchingPersons = this.persons.filter(person => person.id === id);
+		return matchingPersons[0];
+	}
+
+
 	@Get()
 	public getPersonsSync(): Array<Person> {
 		return this.persons;

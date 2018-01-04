@@ -14,6 +14,25 @@ const models: TsoaRoute.Models = {
 };
 
 export function RegisterRoutes(app: any) {
+	app.get('/v0/persons/:id',
+		function(request: any, response: any, next: any) {
+			const args = {
+				id: { "in": "path", "name": "id", "required": true, "dataType": "string" },
+			};
+
+			let validatedArgs: any[] = [];
+			try {
+				validatedArgs = getValidatedArgs(args, request);
+			} catch (err) {
+				return next(err);
+			}
+
+			const controller = new PersonController();
+
+
+			const promise = controller.getPersonSync.apply(controller, validatedArgs);
+			promiseHandler(controller, promise, response, next);
+		});
 	app.get('/v0/persons',
 		function(request: any, response: any, next: any) {
 			const args = {
