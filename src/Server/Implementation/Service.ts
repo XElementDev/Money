@@ -19,6 +19,8 @@ export class MoneyRestService {
 		this.router = express.Router();
 
 		this.configureRoutesSync();
+
+		return;
 	}
 
 
@@ -28,6 +30,8 @@ export class MoneyRestService {
 		const path = "/" + urljoin(CompanyInfo.internalNameSync(), ProductInfo.internalNameSync(), 
 		                           "API", "REST");
 		this.app.use(path, this.router);
+
+		return;
 	}
 
 
@@ -42,6 +46,7 @@ export class MoneyRestService {
 	public async start(): Promise<void> {
 		const port = 8080;
 		await MoneyRestService.createServer(this.app, port);
+		return;
 	}
 
 
