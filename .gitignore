@@ -14,6 +14,10 @@ typings/
 .vscode/*
 
 
+# - gulp
+!gulpfile.js
+
+
 # - Visual Studio Code
 #taken from https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
 !.vscode/settings.json
