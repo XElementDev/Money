@@ -4,9 +4,9 @@
 	"version": "2.0.0", 
 	"tasks": [
 		{
-			"identifier": "tsc: build", 
-			"type": "typescript", 
-			"tsconfig": "tsconfig.json", 
+			"identifier": "gulp: build", 
+			"type": "gulp", 
+			"task": "build", 
 			"problemMatcher": [
 				"$tsc"
 			], 
@@ -14,6 +14,11 @@
 				"kind": "build", 
 				"isDefault": true
 			}
+		}, 
+		{
+			"type": "gulp", 
+			"task": "clean", 
+			"problemMatcher": []
 		}
 	]
 }
