@@ -2,5 +2,21 @@
 	"files.exclude": {
 		"**/dist": true, 
 		"**/node_modules": true
-	}
+	}, 
+
+	"todohighlight.keywords": [
+		{
+			"text": "FIXME", 
+			"backgroundColor": "#F06292", 
+			"overviewRulerColor": "#F06292", 
+			"color": "#FFFFFF"
+		}, 
+		{
+			"text": "TODO", 
+			"backgroundColor": "#FFBD2A", 
+			"overviewRulerColor": "#FFBD2A", 
+			"color": "#FFFFFF"
+		}
+	]
+
 }
