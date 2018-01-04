@@ -7,9 +7,7 @@
 			"identifier": "gulp: build", 
 			"type": "gulp", 
 			"task": "build", 
-			"problemMatcher": [
-				"$tsc"
-			], 
+			"problemMatcher": [ "$tsc" ], 
 			"group": {
 				"kind": "build", 
 				"isDefault": true
@@ -19,6 +17,11 @@
 			"type": "gulp", 
 			"task": "clean", 
 			"problemMatcher": []
+		}, 
+		{
+			"type": "gulp", 
+			"task": "rebuild", 
+			"problemMatcher": [ "$tsc" ]
 		}
 	]
 }

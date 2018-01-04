@@ -15,6 +15,7 @@ var allFolders = "**";
 
 var buildTask = "build";
 var cleanTask = "clean";
+var rebuildTask = "rebuild";
 
 var internalTypescriptTask = "_ts";
 
@@ -25,6 +26,11 @@ gulp.task(buildTask, sequence(
 gulp.task(cleanTask, function() {
 	return del([tsAbsoluteOutDir]);
 });
+
+gulp.task(rebuildTask, sequence(
+	cleanTask, 
+	buildTask
+));
 
 gulp.task(internalTypescriptTask, function() {
 	var writeOptions = {
