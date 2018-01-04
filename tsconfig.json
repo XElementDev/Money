@@ -6,6 +6,7 @@
 		"moduleResolution": "node", 
 		"outDir": "dist", 
 		"removeComments": true, 
+		"strictNullChecks": true, 
 		"target": "es2015"//where "es2015"="es6"
 	}
 }
