@@ -5,14 +5,17 @@
 	"version": "0.2.0", 
 	"configurations": [
 		{
-			"type": "node", 
+			"name": "Launch HTML client (Chrome)", 
 			"request": "launch", 
-			"name": "Launch Program", 
-			"program": "${workspaceFolder}/${relativeFile}", 
+			"type": "chrome", 
+			"file": "${workspaceFolder}/src/Clients/HTML/index.html"
+		}, 
+		{
+			"name": "Launch server", 
+			"request": "launch", 
+			"type": "node", 
 			"preLaunchTask": "gulp: build", 
-			"outFiles": [
-				"${workspaceFolder}/dist/**/*.js"
-			]
+			"program": "${workspaceFolder}/dist/Server/Implementation/app.js"
 		}
 	]
 }
