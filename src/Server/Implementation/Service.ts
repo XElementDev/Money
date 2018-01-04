@@ -2,6 +2,9 @@ import * as express from "express";
 import * as http from "http";//Node.js
 import * as urljoin from "url-join";
 
+import * as CompanyInfo from "../../Common/Publishing/CompanyInfo";
+import * as ProductInfo from "../../Common/Publishing/ProductInfo";
+
 
 //#region not unit-tested
 export class MoneyRestService {
@@ -16,7 +19,10 @@ export class MoneyRestService {
 
 	private configureRoutesSync(): void {
 		this.router.get("/", (req, res) => { res.end("Hello World!"); });
-		this.app.use("/", this.router);
+
+		const path = "/" + urljoin(CompanyInfo.internalName(), ProductInfo.internalName(), 
+		                           "API", "REST", "v0");
+		this.app.use(path, this.router);
 	}
 
 
