@@ -14,9 +14,12 @@
 		"gulp-sequence": "^1.0.0",
 		"gulp-sourcemaps": "^2.6.3",
 		"gulp-typescript": "^3.2.3",
+		"through2": "^2.0.3",
 		"typescript": "^2.6.2"
 	},
 	"scripts": {
-		"install": "npm install -g typescript"
+		"install": "npm run install-ts && npm run install-tsoa", 
+		"install-ts": "npm install -g typescript", 
+		"install-tsoa": "npm install -g tsoa"
 	}
 }
