@@ -21,8 +21,8 @@
 		"typescript": "^2.6.2"
 	},
 	"scripts": {
-		"install": "npm run install-ts && npm run install-tsoa", 
-		"install-ts": "npm install -g typescript", 
+		"install": "npm run install-ts && npm run install-tsoa",
+		"install-ts": "npm install -g typescript",
 		"install-tsoa": "npm install -g tsoa"
 	}
 }
