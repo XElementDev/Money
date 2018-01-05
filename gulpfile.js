@@ -2,6 +2,7 @@ var del = require("del");
 var execSync = require("child_process").execSync;//Node.js
 var gulp = require("gulp");
 var path = require("path");//Node.js
+var sass = require("gulp-sass");
 var sequence = require("gulp-sequence");
 var sourcemaps = require("gulp-sourcemaps");
 var through = require("through2");
@@ -21,6 +22,7 @@ var rebuildTask = "rebuild";
 
 var internalCopyTask = "_copy";
 var internalSrcCopyTask = "_copySrcFiles";
+var internalSassTask = "_sass";
 var internalTsoaTask = "_tsoa";
 var internalTypescriptTask = "_ts";
 
@@ -31,7 +33,7 @@ var srcFilesToCopy = [
 
 gulp.task(buildTask, sequence(
 	internalTsoaTask, 
-	[internalCopyTask, internalTypescriptTask]
+	[internalCopyTask, internalSassTask, internalTypescriptTask]
 ));
 
 gulp.task(cleanTask, function() {
@@ -53,6 +55,15 @@ gulp.task(rebuildTask, sequence(
 	cleanTask, 
 	buildTask
 ));
+
+gulp.task(internalSassTask, function() {
+	var globs = path.join(srcFolderName, allFolders, "*.scss");
+	var src$ = gulp.src(globs)
+		.pipe(sass().on("error", sass.logError))
+		.pipe(gulp.dest(tsAbsoluteOutDir))
+	;
+	return src$;
+});
 
 gulp.task(internalTsoaTask, function() {
 	var globs = path.join(srcFolderName, allFolders, "tsoa.json");
