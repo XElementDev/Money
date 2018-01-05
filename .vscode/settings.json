@@ -7,6 +7,14 @@
 
 	// ↓ Extensions
 
+	"cSpell.words": [
+		"endregion",
+		"gulpfile",
+		"tsoa",
+		"urljoin",
+		"xelement"
+	], 
+
 	"todohighlight.keywords": [
 		{
 			"text": "FIXME", 
