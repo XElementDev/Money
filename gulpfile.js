@@ -27,7 +27,6 @@ var internalTsoaTask = "_tsoa";
 var internalTypescriptTask = "_ts";
 
 var srcFilesToCopy = [
-	path.join(srcFolderName, allFolders, "*.css"), 
 	path.join(srcFolderName, allFolders, "*.html")
 ];
 

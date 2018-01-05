@@ -1,10 +1,11 @@
+@import "./partials/_titleHeaders";
+
+
 .title-header {
-	background-image: linear-gradient(to bottom, #00AA00, #5cb85c);/*see bg-info*/
-	color: rgba(255, 255, 255, .9);
+	@extend .title-header-positive;
 	margin-bottom: 24px;
 	padding: 24px;
 }
-
 
 .content {
 	margin: 24px 0px;

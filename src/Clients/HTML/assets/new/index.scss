@@ -1,0 +1,22 @@
+@import "../../partials/_titleHeaders";
+
+
+.title-header-earning {
+	@extend .title-header-positive;
+}
+
+.title-header-expense {
+	@extend .title-header-negative;
+}
+
+.content {
+	margin: 24px 0px;
+}
+
+form .row label {
+	background: magenta;
+}
+
+form row input {
+	background: cyan;
+}
