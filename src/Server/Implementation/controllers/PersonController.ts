@@ -35,15 +35,15 @@ export class PersonController extends Controller {
 	private static initializeDummyValuesSync(): void {
 		const personA: Person = {
 			id: "1", 
-			prename: "John", 
-			surname: "Doe"
+			prename: "Max", 
+			surname: "Mustermann"
 		};
 		const personB: Person = {
 			avatarUrlStr: "https://taeglichneu.files.wordpress.com/2011/01/mustermann.jpg", 
 			id: "2", 
 			prename: "Erika", 
 			surname: "Mustermann"
-		}
+		};
 		const dummyPersons = [ personA, personB ];
 		PersonController._persons = dummyPersons;
 		return;
