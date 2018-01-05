@@ -28,7 +28,7 @@ export class MoneyRestService {
 		registerRoutesSync(this.router);
 
 		const path = "/" + urljoin(CompanyInfo.internalNameSync(), ProductInfo.internalNameSync(), 
-		                           "API", "REST");
+		                           "API", "REST");//TODO: Don't hard code this.
 		this.app.use(path, this.router);
 
 		return;
@@ -44,7 +44,7 @@ export class MoneyRestService {
 
 
 	public async start(): Promise<void> {
-		const port = 8080;
+		const port = 8080;//TODO: Don't hard code this.
 		await MoneyRestService.createServer(this.app, port);
 		return;
 	}
