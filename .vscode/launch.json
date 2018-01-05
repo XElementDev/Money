@@ -8,7 +8,7 @@
 			"name": "Launch HTML client (Chrome)", 
 			"request": "launch", 
 			"type": "chrome", 
-			"file": "${workspaceFolder}/src/Clients/HTML/index.html"
+			"file": "${workspaceFolder}/dist/Clients/HTML/index.html"
 		}, 
 		{
 			"name": "Launch server", 

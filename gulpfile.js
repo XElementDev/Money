@@ -19,22 +19,40 @@ var buildTask = "build";
 var cleanTask = "clean";
 var rebuildTask = "rebuild";
 
+var internalCopyTask = "_copy";
+var internalSrcCopyTask = "_copySrcFiles";
 var internalTsoaTask = "_tsoa";
 var internalTypescriptTask = "_ts";
 
+var srcFilesToCopy = [
+	path.join(srcFolderName, allFolders, "*.css"), 
+	path.join(srcFolderName, allFolders, "*.html")
+];
+
 gulp.task(buildTask, sequence(
 	internalTsoaTask, 
-	internalTypescriptTask
+	[internalCopyTask, internalTypescriptTask]
 ));
 
 gulp.task(cleanTask, function() {
 	return del([tsAbsoluteOutDir]);
 });
 
+gulp.task(internalCopyTask, sequence(
+	[internalSrcCopyTask]
+));
+
 gulp.task(rebuildTask, sequence(
 	cleanTask, 
 	buildTask
 ));
+
+gulp.task(internalSrcCopyTask, function() {
+	var src$ = gulp.src(srcFilesToCopy)
+		.pipe(gulp.dest(tsAbsoluteOutDir))
+	;
+	return src$;
+});
 
 gulp.task(internalTsoaTask, function() {
 	var globs = path.join(srcFolderName, allFolders, "tsoa.json");
