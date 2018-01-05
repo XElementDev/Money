@@ -4,6 +4,7 @@
 		"experimentalDecorators": true, 
 		"module": "commonjs", 
 		"moduleResolution": "node", 
+		"noImplicitAny": true, 
 		"outDir": "dist", 
 		"removeComments": true, 
 		"strictNullChecks": true, 
