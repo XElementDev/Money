@@ -42,17 +42,17 @@ gulp.task(internalCopyTask, sequence(
 	[internalSrcCopyTask]
 ));
 
-gulp.task(rebuildTask, sequence(
-	cleanTask, 
-	buildTask
-));
-
 gulp.task(internalSrcCopyTask, function() {
 	var src$ = gulp.src(srcFilesToCopy)
 		.pipe(gulp.dest(tsAbsoluteOutDir))
 	;
 	return src$;
 });
+
+gulp.task(rebuildTask, sequence(
+	cleanTask, 
+	buildTask
+));
 
 gulp.task(internalTsoaTask, function() {
 	var globs = path.join(srcFolderName, allFolders, "tsoa.json");
