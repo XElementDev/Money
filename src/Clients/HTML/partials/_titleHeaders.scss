@@ -4,7 +4,8 @@
 @mixin title-header($from-color, $to-color) {
 	background-image: linear-gradient(to bottom, $from-color, $to-color);
 	color: rgba(255, 255, 255, .9);
-	padding: 12px;
+	margin-bottom: 24px;
+	padding: 24px;
 }
 
 .title-header-default {
@@ -12,9 +13,9 @@
 }
 
 .title-header-negative {
-	@include title-header(#CC0000, $btn-danger_bg-clr);
+	@include title-header(#990000, $btn-danger_bg-clr);
 }
 
 .title-header-positive {
-	@include title-header(#00AA00, $btn-success_bg-clr);
+	@include title-header(#005500, $btn-success_bg-clr);
 }
