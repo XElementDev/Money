@@ -4,6 +4,9 @@
 		"**/node_modules": true
 	}, 
 
+
+	// ↓ Extensions
+
 	"todohighlight.keywords": [
 		{
 			"text": "FIXME", 
@@ -19,4 +22,6 @@
 		}
 	]
 
+
+	// ↓ Misc.
 }
