@@ -1,6 +1,6 @@
 import { Controller, Get, Route } from "tsoa";
 
-import { Person } from "../../Interface/IPerson";
+import { IdentifiablePerson } from "../../Interface/IIdentifiablePerson";
 
 
 //#region not unit-tested
@@ -14,14 +14,14 @@ export class PersonController extends Controller {
 
 
 	@Get("{id}")
-	public getPersonSync(id: string): Person {
+	public getPersonSync(id: string): IdentifiablePerson {
 		const matchingPersons = this.persons.filter(person => person.id === id);
 		return matchingPersons[0];
 	}
 
 
 	@Get()
-	public getPersonsSync(): Array<Person> {
+	public getPersonsSync(): Array<IdentifiablePerson> {
 		return this.persons;
 	}
 
@@ -33,12 +33,12 @@ export class PersonController extends Controller {
 
 
 	private static initializeDummyValuesSync(): void {
-		const personA: Person = {
+		const personA: IdentifiablePerson = {
 			id: "1", 
 			prename: "Max", 
 			surname: "Mustermann"
 		};
-		const personB: Person = {
+		const personB: IdentifiablePerson = {
 			avatarUrlStr: "https://taeglichneu.files.wordpress.com/2011/01/mustermann.jpg", 
 			id: "2", 
 			prename: "Erika", 
@@ -50,10 +50,10 @@ export class PersonController extends Controller {
 	}
 
 
-	private get persons(): Array<Person> { return PersonController._persons; }
+	private get persons(): Array<IdentifiablePerson> { return PersonController._persons; }
 
 
-	private static _persons: Array<Person>;
+	private static _persons: Array<IdentifiablePerson>;
 
 }
 

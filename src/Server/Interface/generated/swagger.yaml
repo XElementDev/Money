@@ -2,12 +2,12 @@ basePath: /v0
 consumes:
     - application/json
 definitions:
-    Person:
+    IdentifiablePerson:
         properties:
-            avatarUrlStr:
-                type: object
             id:
                 type: string
+            avatarUrlStr:
+                type: object
             prename:
                 type: string
             surname:
@@ -33,7 +33,7 @@ paths:
                 '200':
                     description: Ok
                     schema:
-                        $ref: '#/definitions/Person'
+                        $ref: '#/definitions/IdentifiablePerson'
             security: []
             parameters:
                 -
@@ -52,7 +52,7 @@ paths:
                     schema:
                         type: array
                         items:
-                            $ref: '#/definitions/Person'
+                            $ref: '#/definitions/IdentifiablePerson'
             security: []
             parameters: []
 produces:
